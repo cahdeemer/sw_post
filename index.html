@@ -2,8 +2,24 @@
 <html>
 <head>
 	<title>My First Service Worker</title>
+	<link rel="stylesheet" href="css/main.css">
+
 </head>
 <body>
 	<h1>Hello, World!</h1>
+
+	
+	<script>
+		// Register our service worker
+		if ('serviceWorker' in navigator) {
+		  	navigator.serviceWorker.register('/sw.js').then(function(registration); {
+		  		//Registration was successful. Yippee!!
+		  		console.log('ServiceWorker registration was successful with scope: ', registration.scope);
+			}).catch(function(err) {
+		 		//Registration failed. Boo!!
+		 		console.log('ServiceWorker registration failed: ', err);
+			});
+		}
+	</script>
 </body>
 </html>
