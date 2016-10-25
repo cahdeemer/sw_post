@@ -14,13 +14,8 @@ this.addEventListener('install', (event) => {
   );
 });
 
-this.addEventListener('activate', function(event) {
-  event.waitUntil(self.clients.claim());
-});
 
-
-
-//this.addEventListener('activate',  () => self.clients.claim());
+this.addEventListener('activate',  () => self.clients.claim());
 
 this.addEventListener('fetch', (event) => {
   event.respondWith(
