@@ -4,7 +4,10 @@ this.addEventListener('install', (event) => {
     caches.open('v1')
       .then((cache) => {
         return cache.addAll([
-          '/index.html'
+          '/index.html',
+          '/',
+          '/css/main.css',
+          '/js/main.js'
         ]);
       })
       .then(()=> self.skipWaiting())
